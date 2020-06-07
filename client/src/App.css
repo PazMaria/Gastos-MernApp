@@ -10,8 +10,21 @@
 }
 body {
   color: var(--text-color);
-  background-image: url("./images/rocks.jpg");
-  background-size: cover;
+  height: 100vh;
+  background: linear-gradient(-45deg, #d0d4d6, #557a95, #225579, #081c2e);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 a {
@@ -99,6 +112,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .form-container h1 {
   text-align: center;
+  color: #fff;
 }
 .form-container div {
   text-align: center;
