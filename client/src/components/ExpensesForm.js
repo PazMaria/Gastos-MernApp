@@ -22,7 +22,7 @@ const ExpensesForm = () => {
     setAmount("");
   };
   return (
-    <div className="form-container">
+    <div className="form-container ex">
       <form onSubmit={handleSubmit}>
         <div className="fieldset">
           <div className="col-sm-10">
