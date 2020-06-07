@@ -9,22 +9,9 @@
   box-sizing: border-box;
 }
 body {
-  color: var(--text-color);
   height: 100vh;
-  background: linear-gradient(-45deg, #d0d4d6, #557a95, #225579, #081c2e);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-}
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  color: #112d32;
+  overflow: hidden;
 }
 
 a {
@@ -71,12 +58,14 @@ input[type="number"]::-webkit-outer-spin-button {
 .navbar {
   display: flex;
   justify-content: space-between;
-  background-color: #557a95;
   align-items: center;
   padding: 0.7rem 2rem;
   z-index: 1;
   width: 100%;
   height: 4rem;
+}
+.two {
+  background-color: #557a95;
 }
 
 .navbar ul {
@@ -86,16 +75,25 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .navbar a {
-  color: #fff;
+  /* color: #fff; */
+  /* color: #032d4e; */
   padding: 0.45rem;
   margin: 0 0.25rem;
 }
 
 .navbar a:hover {
-  color: var(--light-color);
+  color: #324958;
+}
+.white {
+  color: #fff;
+}
+
+.blue {
+  color: #032d4e;
 }
 
 .titleName {
+  font-size: 3rem;
   margin-left: 10px;
   color: #fff;
   text-shadow: 0px 0px 0px #9b9a9a, 0px 1px 0px #b1b1b1, 0px 2px 1px #b1b1b1,
@@ -105,21 +103,55 @@ input[type="number"]::-webkit-outer-spin-button {
 
 /* -----------------Register-Login---------------- */
 .form-container {
-  max-width: 500px;
+  max-width: 600px;
   margin: 2rem auto;
   overflow: hidden;
   padding: 0 2rem;
 }
+
 .form-container h1 {
   text-align: center;
-  color: #fff;
+  color: #032d4e;
 }
 .form-container div {
   text-align: center;
   justify-content: center;
 }
 .user {
+  margin: 40% auto;
+  width: 500px;
   opacity: 0.8;
+}
+
+.wave {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 7rem;
+  padding: 0 2rem;
+}
+
+.img {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.img img {
+  width: 500px;
+}
+
+.first {
+  background-color: #557a95;
 }
 
 /* ----------------------------------------------------------- */

@@ -16,7 +16,11 @@ const Navbar = () => {
     <>
       <li>Hello {user && user.name}</li>
       <li>
-        <a onClick={onLogout} href="#!">
+        <a
+          className={isAuthenticated ? "white" : "blue"}
+          onClick={onLogout}
+          href="#!"
+        >
           <i className="fas fa-sign-out-alt"></i>{" "}
           <span className="hide-sm">Logout</span>
         </a>
@@ -35,7 +39,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar">
+    <div className={isAuthenticated ? "navbar two" : "navbar one"}>
       <h1 className="titleName">Gastos</h1>
       <ul>{isAuthenticated ? authLinks : guestLinks}</ul>
     </div>

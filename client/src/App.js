@@ -25,7 +25,7 @@ const App = () => {
           <BrowserRouter>
             <Navbar />
             <>
-              <div className="container">
+              <div className="main">
                 <Alerts />
                 <Switch>
                   <PrivateRoute exact path="/" component={Home} />

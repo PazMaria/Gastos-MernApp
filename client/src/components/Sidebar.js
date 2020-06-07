@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import transfer from "../images/transfer.svg";
 
 const Sidebar = ({ onRouteChange }) => {
   const [active, setActive] = useState("totals");
@@ -61,6 +62,9 @@ const Sidebar = ({ onRouteChange }) => {
         >
           Settings
         </button>
+        <div className="img side">
+          <img src={transfer} />
+        </div>
       </div>
     </>
   );

@@ -1,6 +1,8 @@
 import React, { useState, useContext, useEffect } from "react";
 import { AlertContext } from "../context/alert/AlertContext";
 import { AuthContext } from "../context/auth/AuthContext";
+import transfer from "../images/transfer.svg";
+import wave2 from "../images/wave2.png";
 
 const Register = (props) => {
   const { setAlert } = useContext(AlertContext);
@@ -46,65 +48,69 @@ const Register = (props) => {
   };
 
   return (
-    <div className="form-container user">
-      <h1>New Account</h1>
-      <form>
-        <div className="fieldset">
-          {/* <label htmlFor="name">Name</label> */}
-          <input
-            placeholder="Name"
-            type="text"
-            name="name"
-            value={name}
-            onChange={onChange}
-            required
-          />
+    <>
+      <img className="wave" src={wave2} />
+      <div className="container">
+        <div className="img">
+          <img src={transfer} />
         </div>
-        <div className="fieldset">
-          {/* <label htmlFor="email">Email Address</label> */}
-          <input
-            placeholder="Email"
-            type="email"
-            name="email"
-            value={email}
-            onChange={onChange}
-            required
-          />
+        <div className="form-container user">
+          <h1>New Account</h1>
+          <form>
+            <div className="fieldset">
+              <input
+                placeholder="Name"
+                type="text"
+                name="name"
+                value={name}
+                onChange={onChange}
+                required
+              />
+            </div>
+            <div className="fieldset">
+              <input
+                placeholder="Email"
+                type="email"
+                name="email"
+                value={email}
+                onChange={onChange}
+                required
+              />
+            </div>
+            <div className="fieldset">
+              <input
+                placeholder="Password"
+                type="password"
+                name="password"
+                value={password}
+                onChange={onChange}
+                required
+                minLength="6"
+              />
+            </div>
+            <div className="fieldset">
+              <input
+                placeholder="Confirm Password"
+                type="password"
+                name="password2"
+                value={password2}
+                onChange={onChange}
+                required
+                minLength="6"
+              />
+            </div>
+            <div className="fieldset">
+              <input
+                type="submit"
+                value="Register"
+                className="btn first"
+                onClick={onSubmit}
+              />
+            </div>
+          </form>
         </div>
-        <div className="fieldset">
-          {/* <label htmlFor="password">Password</label> */}
-          <input
-            placeholder="Password"
-            type="password"
-            name="password"
-            value={password}
-            onChange={onChange}
-            required
-            minLength="6"
-          />
-        </div>
-        <div className="fieldset">
-          {/* <label htmlFor="password2">Confirm Password</label> */}
-          <input
-            placeholder="Confirm Password"
-            type="password"
-            name="password2"
-            value={password2}
-            onChange={onChange}
-            required
-            minLength="6"
-          />
-        </div>
-        <div className="fieldset">
-          <input
-            type="submit"
-            value="Register"
-            className="btn"
-            onClick={onSubmit}
-          />
-        </div>
-      </form>
-    </div>
+      </div>
+    </>
   );
 };
 
