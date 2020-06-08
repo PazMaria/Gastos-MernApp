@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { AlertContext } from "../context/alert/AlertContext";
 import { AuthContext } from "../context/auth/AuthContext";
+import Alerts from "./Alerts";
 import transfer from "../images/transfer.svg";
 import wave2 from "../images/wave2.png";
 
@@ -108,6 +109,9 @@ const Register = (props) => {
               />
             </div>
           </form>
+          <div className="alert">
+            <Alerts />
+          </div>
         </div>
       </div>
     </>

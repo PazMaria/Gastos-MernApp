@@ -4,7 +4,6 @@ import Navbar from "./components/NavBar";
 import Home from "./components/Home";
 import Register from "./components/Register";
 import Login from "./components/Login";
-import Alerts from "./components/Alerts";
 import PrivateRoute from "./components/PrivateRoute";
 
 import { ExpensesContextProvider } from "./context/expenses/ExpensesContext";
@@ -26,7 +25,6 @@ const App = () => {
             <Navbar />
             <>
               <div className="main">
-                <Alerts />
                 <Switch>
                   <PrivateRoute exact path="/" component={Home} />
                   <Route exact path="/register" component={Register} />

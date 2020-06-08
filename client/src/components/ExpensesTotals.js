@@ -5,7 +5,6 @@ import { YearBarChart } from "./YearBarChart";
 
 const ExpensesTotals = () => {
   const { expenses, getExpenses } = useContext(ExpensesContext);
-  console.log(expenses);
 
   useEffect(() => {
     getExpenses();

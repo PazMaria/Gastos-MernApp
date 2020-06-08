@@ -32,26 +32,10 @@ input[type="number"]::-webkit-outer-spin-button {
   background: #f4f4f4;
   color: #333;
 }
-.alert-primary {
-  background: #003699;
-  color: #fff;
-}
-.alert-light {
-  background: #f4f4f4;
-  color: #333;
-}
-.alert-dark {
-  background: #dc3545;
-  color: #fff;
-}
+
 .alert-danger {
   background: #324958;
   color: #fff;
-}
-.alert-white {
-  background: #fff;
-  color: #333;
-  border: #ccc solid 1px;
 }
 
 /* ---------------------------Navbar---------------------------- */

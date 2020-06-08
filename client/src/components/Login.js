@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { AuthContext } from "../context/auth/AuthContext";
 import { AlertContext } from "../context/alert/AlertContext";
+import Alerts from "./Alerts";
 import transfer from "../images/transfer.svg";
 import wave2 from "../images/wave2.png";
 
@@ -77,6 +78,9 @@ const Login = (props) => {
               <input type="submit" value="Login" className="btn first" />
             </div>
           </form>
+          <div className="alert">
+            <Alerts />
+          </div>
         </div>
       </div>
     </>
