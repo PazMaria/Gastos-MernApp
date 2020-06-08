@@ -20,7 +20,7 @@ const Login = (props) => {
       setAlert(error, "danger");
       clearErrors();
     }
-  }, [isAuthenticated, props.history, setAlert]);
+  }, [error, isAuthenticated, props.history, setAlert]);
 
   const [user, setUser] = useState({
     email: "",
@@ -75,7 +75,12 @@ const Login = (props) => {
               />
             </div>
             <div className="fieldset">
-              <input type="submit" value="Login" className="btn first" />
+              <input
+                type="submit"
+                value="Login"
+                className="btn first"
+                onClick={onSubmit}
+              />
             </div>
           </form>
           <div className="alert">
